@@ -2,36 +2,101 @@ $white-color: #fff;
 $dark-green-color:#009e54;
 $light-green-color:#05c46b;
 $blue-color:#00d8d6;
+$header-height:20vh;
+$gradinet-image:linear-gradient($light-green-color, $dark-green-color);
 
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
+
+
 
 body {
     font-family: ubuntu;
+    width: 100%;
+    min-height: 200vh;
+}
+
+.row {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    -webkit-clip-path: polygon(0 18%, 100% 0, 100% 74%, 0 100%);
+    clip-path: polygon(0 18%, 100% 0, 100% 74%, 0 100%);
+}
+
+.start {
+    min-height: 100vh;
 }
 
 .header {
     display: flex;
     width: 100%;
-    height: 20vh;
-    // background-color: $green-color;
-    background-image: linear-gradient($light-green-color, $dark-green-color);
-
+    height: $header-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: $gradinet-image;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
     padding: 10px 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
-    h1 {
+    .h1 {
         font-weight: 700;
+        color: $white-color;
+        font-size: 50px;
+    }
+}
+
+.section-about {
+    padding: 20px;
+    margin-top: $header-height;
+    min-height: calc(100vh - #{$header-height});
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+
+    .row {
+        z-index: -1;
+        top: 58vh;
+        background: url('../images/row-1280.jpg') no-repeat;
+        background-position: 75% 117%;
+        background-attachment: fixed;
+        opacity: 0.4;
+    }
+
+    .h2 {
+        text-align: center;
+        margin: 20px auto;
+        font-size: 35px;
+    }
+
+    .text-about {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .go-down {
+        $size: 60px;
+        width: $size;
+        height: $size;
+        font-size:calc(#{ $size} * 0.75);
+        line-height: $size;
+
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 50%;
+        background-image: $gradinet-image;
         color: $white-color;
     }
 }
