@@ -52,7 +52,7 @@ body {
     .h1 {
         font-weight: 700;
         color: $white-color;
-        font-size: 50px;
+        font-size:calc(#{$header-height}/2 * 0.85);
     }
 }
 
@@ -93,10 +93,58 @@ body {
         line-height: $size;
 
         display: block;
-        margin: 0 auto;
+        margin: 10px auto 0;
         border: none;
         border-radius: 50%;
         background-image: $gradinet-image;
         color: $white-color;
+    }
+}
+
+main {
+    margin-top: 20px;
+
+    .task {
+        padding: 0 20px;
+
+        .h3 {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 120%;
+                left: 0;
+                height: 2px;
+                width: 50vw;
+                background-color: #000;
+            }
+
+            position: relative;
+            font-size: 28px;
+            margin-left: 15px;
+        }
+
+        .task-text {
+            display: block;
+            margin-top: 10px;
+            font-size: 26px;
+            font-family: lato;
+            line-height: 1.25;
+            word-spacing: 5px;
+
+            .answers-wrap {
+                font-weight: bold;
+
+                .a::after,
+                .b::after {
+                    content: " /";
+                    font-weight: normal;
+                }
+
+                .wrap-me {
+                    display: inline-block;
+                }
+            }
+
+        }
     }
 }
