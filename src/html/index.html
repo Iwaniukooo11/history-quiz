@@ -9,111 +9,123 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Prosta Hsitoria!</title>
 </head>
 
 <body>
     <header class="header">
-        <h1 class="h1 Zrozum">Zrozum</h1>
-        <h1 class="h1 Historię">Historię</h1>
+        <h1 class='header__title'>
+            <span class="title__span">Zrozum</span>
+            <span class="title__span">Historię</span>
+        </h1>
     </header>
 
-    <section class="section-about">
+    <section class="section section-about">
         <div class="row"></div>
-        <h2 class="h2">Nie bój się historii!</h2>
-        <p class="text-about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quia maiores fuga ut uae.
+        <h2 class="section-about__title">Nie bój się historii!</h2>
+        <p class="section-about__desc">Lorem, ips um dolor sit amet consectetur adipisicing elit. Eius quia
+            maiores fuga ut uae.
             Nihil, architecto, nemo explicabo quod, maiores beatae dolor cumque iusto adipisci qui possimus quasi
             impedit ipsa.</p>
-        <button class="go-down">
-            <i class="fas fa-arrow-down"></i>
+        <button class=" section-about__btn">
+            <i class="btn__fas fas fa-arrow-down"></i>
         </button>
     </section>
 
     <main>
-        <section class="task task-1">
-            <h3 class="h3 task-name">Zadanie 1</h3>
-            <p class="task-text">
-                W <span class="answers-wrap">
-                    <span class="answer a">997</span>
-                    <span class="answer b">1000</span>
-                    <span class="answer c">1025</span>
-                </span>
-                roku w Polsce odbył się zjazd Gnieźnieński. Gospodarzem
-                tego wydarzenia był
-                <span class="answers-wrap">
-                    <span class=" wrap-me answer a">Mieszko I</span>
-                    <span class="answer b">Bolesław Chrobry</span>
-                    <span class="answer c">Kazimierz Wielki.</span>
-                </span>
-                Gościem był Cesarz Rzymski,Król Niemiec
-                <span class="answers-wrap">
-                    <span class="wrap-me answer a"> Otton I</span>
-                    <span class="wrap-me answer b"> Otton II</span>
-                    <span class="wrap-me answer c"> Otton III.</span>
-                </span>
-            </p>
-        </section>
+        <ul class="exercises">
+            <li class='exercises__list-element'>
+                <h3 class="exercises__exercise-num">Zadanie 1</h3>
+                <p class="exercises__txt">
+                    W <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">997</li>
+                        <li class="exercises__answers__answer answer-b">1000</li>
+                        <li class="exercises__answers__answer answer-c">1025</li>
+                    </ul>
+                    roku w Polsce odbył się zjazd Gnieźnieński. Gospodarzem
+                    tego wydarzenia był
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a wrap-me">Mieszko I</li>
+                        <li class="exercises__answers__answer answer-b">Bolesław Chrobry</li>
+                        <li class="exercises__answers__answer answer-c">Kazimierz Wielki.</li>
+                    </ul>
+                    Gościem był Cesarz Rzymski,Król Niemiec
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a"> Otton I</li>
+                        <li class="exercises__answers__answer answer-b"> Otton II</li>
+                        <li class="exercises__answers__answer answer-c"> Otton III.</li>
+                    </ul>
+                </p>
 
-        <section class="task task2">
-            <h3 class="h3 task-name">Zadanie 2</h3>
-            <p class="task-text">
-                Do rozbicia dzielnicowego doszło za czasów panowania
-                <span class="answers-wrap">
-                    <span class="answer a">Władysława Hermana</span>
-                    <span class="answer b">Bolesława Krzywoustego</span>
-                    <span class="answer c">
-                        Kazimierza Wielkiego.
-                    </span>
-                </span>
-                Zgodził się on na podział Polski w trosce o podzielenie ziem swoim
-                <span class="answers-wrap">
-                    <span class="answer a">3</span>
-                    <span class="answer b">4</span>
-                    <span class="answer c">5</span>
-                </span>
-                synom, co miało zapobiec walce o tron.
-                Do rozbicia doszło w
-                <span class="answers-wrap">
-                    <span class="answer a">1102</span>
-                    <span class="answer b">1126</span>
-                    <span class="answer c">1138</span>
-                </span>
-            </p>
-        </section>
+            </li>
 
-        <section class="task task3">
-            <h3 class="h3 task-name">Zadanie 3</h3>
-            <p class="task-text">
-                Wielki książe Litewski,później Król Polski Władysław Jagiełło w roku
-                <span class="answers-wrap">
-                    <span class="answer a">1382</span>
-                    <span class="answer b">1385</span>
-                    <span class="answer c">1387</span>
-                </span>
-                Zawarł Unię Personalną z Litwą.
-                Wziął sobie za żonę Jadwigę Andegaweńską.
-                W
-                <span class="answers-wrap">
-                    <span class="answer a">1410</span>
-                    <span class="answer b">1417</span>
-                    <span class="answer c">1421</span>
-                </span>
-                Dowodził w Bitwie pod Grunwaldem,gdzie pokonał zakon
-                <span class="answers-wrap">
-                    <span class="answer a">Bernardynów</span>
-                    <span class="answer a">Jezuitów</span>
-                    <span class="answer a">Krzyżaków</span>
-                </span>
-            </p>
-        </section>
+            <li class='exercises__list-element'>
 
-        <section class="task task4">
-            <h3 class="h3 task-name">Zadanie 4</h3>
-            <p class="task-text">
-                
-            </p>
-        </section>
+                <h3 class="exercises__exercise-num">Zadanie 2</h3>
+                <p class="exercises__txt">
+                    Do rozbicia dzielnicowego doszło za czasów panowania
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">Władysława Hermana</li>
+                        <li class="exercises__answers__answer answer-b">Bolesława Krzywoustego</li>
+                        <li class="exercises__answers__answer answer-c">
+                            Kazimierza Wielkiego.
+                        </li>
+                    </ul>
+                    Zgodził się on na podział Polski w trosce o podzielenie ziem swoim
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">3</li>
+                        <li class="exercises__answers__answer answer-b">4</li>
+                        <li class="exercises__answers__answer answer-c">5</li>
+                    </ul>
+                    synom, co miało zapobiec walce o tron.
+                    Do rozbicia doszło w
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">1102</li>
+                        <li class="exercises__answers__answer answer-b">1126</li>
+                        <li class="exercises__answers__answer answer-c">1138</li>
+                    </ul>
+                </p>
+
+            </li>
+
+            <li class='exercises__list-element'>
+
+                <h3 class="exercises__exercise-num">Zadanie 3</h3>
+                <p class="exercises__txt">
+                    Wielki książe Litewski,później Król Polski Władysław Jagiełło w roku
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">1382</li>
+                        <li class="exercises__answers__answer answer-b">1385</li>
+                        <li class="exercises__answers__answer answer-c">1387</li>
+                    </ul>
+                    Zawarł Unię Personalną z Litwą.
+                    Wziął sobie za żonę Jadwigę Andegaweńską.
+                    W
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">1410</li>
+                        <li class="exercises__answers__answer answer-b">1417</li>
+                        <li class="exercises__answers__answer answer-c">1421</li>
+                    </ul>
+                    Dowodził w Bitwie pod Grunwaldem,gdzie pokonał zakon
+                    <ul class="exercises__answers">
+                        <li class="exercises__answers__answer answer-a">Bernardynów</li>
+                        <li class="exercises__answers__answer answer-b">Jezuitów</li>
+                        <li class="exercises__answers__answer answer-c">Krzyżaków</li>
+                    </ul>
+                </p>
+
+            </li>
+
+            <li class='exercises__list-element'>
+                <section class="section-task section-task4">
+                    <h3 class="exercises__exercise-num">Zadanie 4</h3>
+                    <p class="exercises__txt">
+
+                    </p>
+                </section>
+            </li>
+        </ul>
     </main>
 
     <script src="assets/js/main.js"></script>
