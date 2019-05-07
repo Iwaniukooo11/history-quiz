@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    height: $header-height;
+    background-image: $gradinet-image;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+    &__title {
+        font-weight: 700;
+        color: $white-color;
+        font-size:calc(#{$header-height}/2 * 0.85);
+        text-align: center;
+    }
+}
