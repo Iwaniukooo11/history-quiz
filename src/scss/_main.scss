@@ -62,3 +62,68 @@
         }
     }
 }
+
+@media(min-width:480px) {
+    .exercises {
+        &__exercise-num {
+            font-size: 36px;
+
+            &::after {
+                height: 4px;
+            }
+        }
+    }
+}
+
+@media(min-width:880px) {
+    .exercises {
+        &__exercise-num {
+            font-size: 40px;
+        }
+
+        &__txt,
+        &__answers {
+            font-size: 27px;
+        }
+
+
+    }
+}
+
+@media(min-width:1100px) {
+    .exercises {
+        flex-direction: row;
+        justify-content: space-around;
+
+        &__list-element {
+            flex-basis: 45%;
+            text-align: center;
+
+            &:first-child {
+                margin-top: 25px;
+            }
+        }
+
+
+
+        &__exercise-num::after {
+            width: 35vw;
+            left: calc((100% - 35vw) / 2)
+        }
+    }
+}
+
+@media(min-width:1690px) {
+    .exercises {
+        &__list-element {
+            flex-basis: 28%;
+        }
+
+        &__exercise-num::after {
+            width: 24vw;
+            left: calc((100% - 24vw) / 2)
+        }
+
+    }
+
+}

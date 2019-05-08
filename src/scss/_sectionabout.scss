@@ -5,8 +5,6 @@
     justify-content: space-around;
     align-content: center;
     padding: 0 25px;
-    // text-transform: uppercase;
-
 
     &__title {
         text-align: center;
@@ -20,11 +18,11 @@
     }
 
     &__btn {
-        $size: 60px;
-        width: $size;
-        height: $size;
-        font-size:calc(#{ $size} * 0.75);
-        line-height: $size;
+
+        width: $size1;
+        height: $size1;
+        font-size:calc(#{ $size1} * 0.75);
+        line-height: $size1;
         margin: 10px auto 0;
         border: none;
         border-radius: 50%;
@@ -39,5 +37,67 @@
         background-position: 75% 117%;
         background-attachment: fixed;
         opacity: 0.4;
+    }
+}
+
+@media(min-width:480px) {
+    .section-about {
+        &__title {
+            font-size: 70px;
+        }
+
+        &__desc {
+            font-size: 28px;
+        }
+
+        &__btn {
+            width: $size2;
+            height: $size2;
+            font-size:calc(#{ $size2} * 0.75);
+            line-height: $size2;
+        }
+    }
+}
+
+@media(min-width:680px) {
+    .section-about {
+        &__desc {
+            font-size: 34px;
+        }
+    }
+}
+
+@media(min-width:980px) {
+    .section-about {
+        &__title {
+            font-size: 75px;
+        }
+
+        &__desc {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        &__btn {
+            width: $size3;
+            height: $size3;
+            font-size:calc(#{ $size3} * 0.75);
+            line-height: $size3;
+        }
+    }
+}
+
+@media(min-width:1100px) {
+    .section-about {
+        &__desc {
+            max-width: 1000px;
+        }
+
+        .row {
+            background: url('../images/row-1920.jpg') no-repeat;
+            background-position: 75% 117%;
+            background-attachment: fixed;
+            height: 350px;
+        }
     }
 }
