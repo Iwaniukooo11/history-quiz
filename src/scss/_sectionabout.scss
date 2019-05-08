@@ -4,8 +4,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    padding: 0 15px;
-    text-transform: uppercase;
+    padding: 0 25px;
+    // text-transform: uppercase;
 
 
     &__title {
@@ -15,8 +15,21 @@
     }
 
     &__desc {
-        text-align: center;
-        font-size: 28px;
+        text-align: left;
+        font-size: 23px;
+    }
+
+    &__btn {
+        $size: 60px;
+        width: $size;
+        height: $size;
+        font-size:calc(#{ $size} * 0.75);
+        line-height: $size;
+        margin: 10px auto 0;
+        border: none;
+        border-radius: 50%;
+        background-image: $gradinet-image;
+        color: $white-color;
     }
 
     .row {
