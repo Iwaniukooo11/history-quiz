@@ -14,6 +14,7 @@ const {
   wait = require('gulp-wait')
 
 sass.compiler = require('node-sass');
+const time = 20
 
 function hello() {
   console.log('Hello!');
@@ -22,19 +23,19 @@ exports.hello = hello
 
 function copy() {
   return src('./src/html/*.html')
-    .pipe(wait(100))
+    .pipe(wait(time))
     .pipe(dest('./dist'))
 }
 
 function assets() {
   return src('./src/assets/**/*')
-    .pipe(wait(100))
+    .pipe(wait(time))
     .pipe(dest('./dist/assets'))
 }
 
 function js() {
   return src('./src/js/*.js')
-    .pipe(wait(100))
+    .pipe(wait(time))
     .pipe(minifyJS({
       ext: {
         min: '.min.js'
@@ -45,7 +46,7 @@ function js() {
 
 function css() {
   return src('./src/scss/*.scss')
-    .pipe(wait(100))
+    .pipe(wait(time))
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({
       includePaths: ['node_modules']
@@ -82,7 +83,7 @@ function clean() {
       read: false,
       allowEmpty: true
     })
-    .pipe(wait(100))
+    .pipe(wait(10))
     .pipe(cleaner());
 }
 

@@ -1,6 +1,6 @@
 @import './variables.scss';
 @import './header.scss';
- @import './main.scss';
+@import './main.scss';
 @import './row.scss';
 @import './sectionabout.scss';
 
@@ -15,5 +15,8 @@
 
 body {
     font-family: ubuntu, Arial, Helvetica, sans-serif;
-  
+}
+
+ul {
+    list-style: none;
 }
