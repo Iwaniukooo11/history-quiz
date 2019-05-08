@@ -80,7 +80,9 @@ main {
     font-size: 26px;
     padding: 5px 15px;
     box-shadow: -4px 4px 0 0 $dark-brown-color;
+    
 }
+
 
 .result {
     width: 80%;
@@ -100,6 +102,15 @@ main {
             }
         }
     }
+
+    .result {
+        font-size: 36px;
+    }
+
+    .check-btn {
+        font-size: 30px;
+        margin: 50px auto;
+    }
 }
 
 @media(min-width:880px) {
@@ -112,8 +123,14 @@ main {
         &__answers {
             font-size: 27px;
         }
+    }
 
+    .result {
+        font-size: 45px;
+    }
 
+    .check-btn {
+        font-size: 45px;
     }
 }
 
@@ -149,7 +166,5 @@ main {
             width: 24vw;
             left: calc((100% - 24vw) / 2)
         }
-
     }
-
 }

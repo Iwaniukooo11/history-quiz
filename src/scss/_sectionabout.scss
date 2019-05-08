@@ -18,22 +18,45 @@
     }
 
     &__btn {
-
         width: $size1;
         height: $size1;
-        font-size:calc(#{ $size1} * 0.75);
+        font-size:calc(#{ $size1} * 0.95);
         line-height: $size1;
         margin: 10px auto 0;
         border: none;
         border-radius: 50%;
         background-image: $gradinet-image;
         color: $white-color;
+        position: relative;
+        overflow: hidden;
+
+
+        &__fas {
+            text-shadow: 0 calc(#{$size1} * -0.5) 0 white,
+            0 calc(#{$size1} * -1) 0 white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: -100%;
+            left: 50%;
+            animation: btn-anim 2.75s infinite linear;
+        }
+    }
+}
+
+@keyframes btn-anim {
+
+    45% {
+        transform: translate(-50%, -50%)
     }
 
-    
+    90% {
+        top: 400%;
+        transform: translate(-50%, -50%)
+    }
 
-
-
+    100% {
+        top: 400%;
+    }
 }
 
 @media(min-width:480px) {
@@ -87,12 +110,6 @@
     .section-about {
         &__desc {
             max-width: 1000px;
-        }
-
-        .row {
-            background: url('../images/row-1920.jpg') no-repeat;
-            background-position: 75% 117%;
-            background-attachment: fixed;
         }
     }
 }

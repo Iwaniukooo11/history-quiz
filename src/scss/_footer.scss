@@ -6,3 +6,9 @@ footer {
     font-size: 24px;
     text-align: center;
 }
+
+@media(min-width:880px) {
+    footer {
+        font-size: 30px;
+    }
+}
