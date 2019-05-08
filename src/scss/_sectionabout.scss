@@ -30,14 +30,10 @@
         color: $white-color;
     }
 
-    .row {
-        z-index: -1;
-        top: 58vh;
-        background: url('../images/row-1280.jpg') no-repeat;
-        background-position: 75% 117%;
-        background-attachment: fixed;
-        opacity: 0.4;
-    }
+    
+
+
+
 }
 
 @media(min-width:480px) {
@@ -97,7 +93,6 @@
             background: url('../images/row-1920.jpg') no-repeat;
             background-position: 75% 117%;
             background-attachment: fixed;
-            height: 350px;
         }
     }
 }

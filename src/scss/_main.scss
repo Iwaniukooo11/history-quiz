@@ -1,13 +1,17 @@
+main {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
 .exercises {
     display: flex;
     flex-direction: column;
-    padding: 0 15px;
-    list-style-type: square;
-    overflow: hidden;
     flex-wrap: wrap;
 
+
     &__list-element {
-        margin: 25px 0;
+        margin: 35px 15px;
         display: block;
         list-style-type: square;
         position: relative;
@@ -60,6 +64,8 @@
         .wrap-me {
             display: inline-block;
         }
+
+
     }
 }
 
@@ -98,13 +104,12 @@
         &__list-element {
             flex-basis: 45%;
             text-align: center;
+            margin: 55px 15px;
 
             &:first-child {
-                margin-top: 25px;
+                margin-top: 55px;
             }
         }
-
-
 
         &__exercise-num::after {
             width: 35vw;
