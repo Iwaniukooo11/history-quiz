@@ -16,15 +16,6 @@
             margin-top: 30px;
         }
 
-        // &::after {
-        //     position: absolute;
-        //     top: calc(100% + 20px);
-        //     left: 10%;
-        //     width: 80%;
-        //     height: 2px;
-        //     background-color: $light-brown-color;
-        //     content: "";
-        // }
     }
 
     &__exercise-num {
@@ -45,14 +36,14 @@
 
     &__txt {
         display: inline;
-        font-size: 22px;
+        font-size: 25px;
         font-family: lato;
 
     }
 
     &__answers {
         display: inline;
-        font-size: 22px;
+        font-size: 25px;
         font-family: lato;
 
         &__answer {
