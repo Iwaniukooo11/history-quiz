@@ -69,6 +69,27 @@ main {
     }
 }
 
+.check-btn {
+    margin: 0 auto 30px;
+    display: block;
+    background-color: $light-brown-color;
+    color: $white-color;
+    font-family: ubuntu, Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 5px 15px;
+    box-shadow: -4px 4px 0 0 $dark-brown-color;
+}
+
+.result {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 29px;
+    margin: 35px auto 10px;
+}
+
 @media(min-width:480px) {
     .exercises {
         &__exercise-num {
