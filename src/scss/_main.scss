@@ -9,7 +9,6 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
 
-
     &__list-element {
         margin: 35px 15px;
         display: block;
@@ -19,7 +18,6 @@ main {
         &:first-child {
             margin-top: 30px;
         }
-
     }
 
     &__exercise-num {
@@ -42,7 +40,6 @@ main {
         display: inline;
         font-size: 25px;
         font-family: lato;
-
     }
 
     &__answers {
@@ -54,6 +51,10 @@ main {
             display: inline;
             font-weight: bold;
 
+            &:hover {
+                cursor: pointer;
+            }
+
             &:nth-child(1)::after,
             &:nth-child(2)::after {
                 content: ' /';
@@ -64,25 +65,21 @@ main {
         .wrap-me {
             display: inline-block;
         }
-
-
     }
 }
 
 .check-btn {
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
     display: block;
     background-color: $light-brown-color;
     color: $white-color;
     font-family: ubuntu, Arial, Helvetica, sans-serif;
     border: none;
     border-radius: 10px;
-    font-size: 26px;
+    font-size: 35px;
     padding: 5px 15px;
     box-shadow: -4px 4px 0 0 $dark-brown-color;
-    
 }
-
 
 .result {
     width: 80%;
@@ -108,8 +105,10 @@ main {
     }
 
     .check-btn {
-        font-size: 30px;
+        font-size: 48px;
         margin: 50px auto;
+        padding: 10px 25px;
+        box-shadow: -5px 6px 0 0 $dark-brown-color;
     }
 }
 
@@ -130,7 +129,21 @@ main {
     }
 
     .check-btn {
-        font-size: 45px;
+        font-size: 55px;
+        margin: 50px auto;
+        padding: 12px 35px;
+        box-shadow: -7px 7px 0 0 $dark-brown-color;
+        animation: check-btn-anim .3s 2s linear;//!!
+    }
+
+    @keyframes check-btn-anim {
+        50% {
+            transform: scale(0.9)
+        }
+
+        100% {
+            transform: scale(1)
+        }
     }
 }
 
