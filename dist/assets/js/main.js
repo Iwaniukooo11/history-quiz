@@ -6,6 +6,18 @@ class Game {
         this.answers = document.querySelectorAll('.exercises__answers__answer')
         this.rowButtonRow = document.querySelector('.section-about__btn__fas')
         this.checkButton = document.querySelector('.check-btn')
+        // this.answers = [
+        //     "abc",
+        //     "bac",
+        //     "bac",
+        //     "acc",
+        //     "bcb",
+        //     "aba",
+        //     "caa",
+        //     "cac",
+        //     "bca",
+        //     "cab"
+        // ]
 
         this.answers.forEach(e => {
             e.addEventListener('click', el => {
@@ -22,6 +34,7 @@ class Game {
             setTimeout(() => {
                 this.changeInline(e.target, 'animation', 'none')
             }, 300)
+            // this.score = checkScore()
         })
     }
     clickAnswer(el) {
@@ -35,9 +48,10 @@ class Game {
     }
 
     changeInline(element, atribute, value) {
-        console.log('chaning!');
         element.style[atribute] = value
     }
+
+
 
 }
 const g = new Game()
