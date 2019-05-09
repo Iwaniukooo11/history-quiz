@@ -51,6 +51,10 @@ main {
             display: inline;
             font-weight: bold;
 
+            &.onBrown {
+                color: $dark-brown-color;
+            }
+
             &:hover {
                 cursor: pointer;
             }
@@ -59,6 +63,7 @@ main {
             &:nth-child(2)::after {
                 content: ' /';
                 display: inline;
+                color: black;
             }
         }
 
@@ -82,6 +87,7 @@ main {
 }
 
 .result {
+    display: none;
     width: 80%;
     text-align: center;
     font-weight: bold;
@@ -133,7 +139,7 @@ main {
         margin: 50px auto;
         padding: 12px 35px;
         box-shadow: -7px 7px 0 0 $dark-brown-color;
-        animation: check-btn-anim .3s 2s linear;//!!
+        animation: check-btn-anim .3s 2s linear; //!!
     }
 
     @keyframes check-btn-anim {

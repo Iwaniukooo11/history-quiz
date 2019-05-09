@@ -13,8 +13,20 @@
     }
 
     &__desc {
-        text-align: left;
+        text-align: center;
         font-size: 23px;
+
+        &__onBrown {
+            color: $dark-brown-color;
+            font-weight: bold;
+        }
+
+        &__last {
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 1.2em;
+        }
     }
 
     &__btn {
@@ -36,9 +48,10 @@
             0 calc(#{$size1} * -1) 0 white;
             position: absolute;
             transform: translate(-50%, -50%);
-            top: -100%;
+            // top: -100%;
+            top: 0;
             left: 50%;
-            animation: btn-anim 2.75s infinite linear;
+            // animation: btn-anim 2.75s infinite linear;
         }
     }
 }
