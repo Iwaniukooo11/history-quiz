@@ -84,6 +84,17 @@ main {
     font-size: 35px;
     padding: 5px 15px;
     box-shadow: -4px 4px 0 0 $dark-brown-color;
+    // animation: check-btn-anim .3s 2s linear; //!!
+}
+
+@keyframes check-btn-anim {
+    50% {
+        transform: scale(0.9)
+    }
+
+    100% {
+        transform: scale(1)
+    }
 }
 
 .result {
@@ -139,18 +150,9 @@ main {
         margin: 50px auto;
         padding: 12px 35px;
         box-shadow: -7px 7px 0 0 $dark-brown-color;
-        animation: check-btn-anim .3s 2s linear; //!!
     }
 
-    @keyframes check-btn-anim {
-        50% {
-            transform: scale(0.9)
-        }
 
-        100% {
-            transform: scale(1)
-        }
-    }
 }
 
 @media(min-width:1100px) {
