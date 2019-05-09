@@ -6,7 +6,7 @@ const {
   parallel
 } = require('gulp'),
   minifyCSS = require('gulp-clean-css'),
-  // minifyJS = require('gulp-minify'),
+  minifyJS = require('gulp-minify'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync').create(),
@@ -36,11 +36,11 @@ function assets() {
 function js() {
   return src('./src/js/*.js')
     .pipe(wait(time))
-    // .pipe(minifyJS({
-    //   ext: {
-    //     min: '.min.js'
-    //   }
-    // }))
+    .pipe(minifyJS({
+      ext: {
+        min: '.min.js'
+      }
+    }))
     .pipe(dest('./dist/assets/js'))
 }
 
