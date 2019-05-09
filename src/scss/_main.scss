@@ -4,13 +4,43 @@ main {
     width: 100%;
 }
 
+.alert {
+    position: fixed;
+    transform: translate(-50%, 0);
+    top: 20px;
+    left: 50%;
+    width: 80%;
+    font-size: 45px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    text-align: center;
+    border: 5px solid $dark-brown-color;
+    padding: 20px 0;
+    display: none;
+    opacity: 0;
+}
+
+@keyframes alert-anim {
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .exercises {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
     &__list-element {
-        margin: 35px 15px;
+        padding: 35px 15px;
         display: block;
         list-style-type: square;
         position: relative;

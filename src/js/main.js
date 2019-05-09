@@ -7,7 +7,7 @@ class Game {
         this.rowButtonRow = document.querySelector('.section-about__btn__fas')
         this.checkButton = document.querySelector('.check-btn')
         this.answersTable = [
-            "abc",
+            "bbc",
             "bac",
             "bac",
             "acc",
@@ -20,6 +20,8 @@ class Game {
         ]
         this.resultBox = document.querySelector('.result')
         this.resultSpan = document.querySelector('.result__text__userScore')
+        this.alertBox = document.querySelector('.alert')
+
 
         this.answersUser.forEach(e => {
             e.addEventListener('click', el => {
@@ -39,15 +41,6 @@ class Game {
 
             this.checkScore(this.answersTable)
 
-
-
-            // if (this.score == 'error')
-            //     this.showError()
-            // else
-            //     this.showScore(this.score, this.resultSpan, this.resultBox)
-
-            // this.score == 'error' ? this.showError() : this.showScore(this.score, this.resultSpan, this.resultBox)
-
         })
     }
     clickAnswer(el) {
@@ -64,40 +57,68 @@ class Game {
         element.style[atribute] = value
     }
     checkScore(good) {
-        const userAnswers = document.querySelectorAll('.exercises__answers__answer.onBrown')
-        if (userAnswers.length != 30) //test!
-            this.showError()
-
-        else {
+        this.userAnswers = document.querySelectorAll('.exercises__answers__answer.onBrown')
+        let found = false
+        if (this.userAnswers.length != 6) //test!
+        {
+            document.querySelectorAll('.exercises__answers').forEach(e => {
+                if (!found) {
+                    this.checked = false
+                    e.childNodes.forEach(el => {
+                        if (el.tagName == 'LI')
+                            if (el.classList.contains('onBrown'))
+                                this.checked = true
+                    })
+                    if (!this.checked) {
+                        this.showError($(e.parentElement).offset().top - 10)
+                        this.showRightAnswers()
+                        found = true
+                    }
+                }
+            })
+        } else {
             let j = 0;
             this.score = 0
-            for (let i = 0; i < 10; i++) { //test!
+            for (let i = 0; i < 2; i++) { //test!
                 for (let k = 0; k < 3; k++) {
-                    if (userAnswers[j].classList.contains(`answer-${good[i][k]}`))
+                    if (this.userAnswers[j].classList.contains(`answer-${good[i][k]}`)) {
                         this.score++
+                        this.changeInline(this.userAnswers[j], 'color', 'green')
+                    } else
+                        this.changeInline(this.userAnswers[j], 'color', 'red')
 
                     j++
-                    console.log('score: ' + this.score);
                 }
             }
+
             this.showScore(this.score, this.resultSpan, this.resultBox)
         }
     }
     showScore(score, txt, box) {
         txt.textContent = score
         this.changeInline(box, 'display', 'block')
-    }
-    showError() {
-        alert('Zaznacz wszystko!')
-    }
-    // returnABC(num) {
-    //     switch (num) {
-    //         case 0:return 'a'
-    //         case 1:return 'b'
-    //         case 0:return 'a'
-    //     }
-    // }
 
+
+    }
+    showError(distance) {
+        $('body,html').animate({
+            scrollTop: distance
+        }, 500)
+        this.changeInline(this.alertBox, 'display', 'block')
+        this.changeInline(this.alertBox, 'animation', 'alert-anim 1s linear')
+        setTimeout(() => {
+            this.changeInline(this.alertBox, 'display', 'none')
+            this.changeInline(this.alertBox, 'animation', 'none')
+        }, 1000)
+    }
+    showRightAnswers() {
+        // this.answersTable
+        // for (let i = 0; i < 10; i++){
+        //     for (let j = 0; i < 2; i++){
+
+        //     }
+        // }
+    }
 
 }
 const g = new Game()
