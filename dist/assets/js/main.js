@@ -16,8 +16,7 @@ class Game {
             "bca",
             "cab"
         ]
-        this.answersString = this.answersTable.toString()
-        this.answersString = this.answersString.replace(',', "")
+        this.answersString = this.answersTable.toString().split(',').join("")
         this.resultBox = document.querySelector('.result')
         this.resultSpan = document.querySelector('.result__text__userScore')
         this.alertBox = document.querySelector('.alert')
@@ -71,7 +70,7 @@ class Game {
     checkScore(good) {
         this.userAnswers = document.querySelectorAll('.exercises__answers__answer.onBrown')
         let found = false
-        if (this.userAnswers.length != 30) {
+        if (this.userAnswers.length != this.userAnswers.length) {
             document.querySelectorAll('.exercises__answers').forEach(e => {
                 if (!found) {
                     this.checked = false
