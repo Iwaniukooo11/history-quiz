@@ -9,9 +9,9 @@ class Game {
             "bac",
             "bac",
             "acc",
-            "bcb",
+            "bca",
             "aba",
-            "caa",
+            "cab",
             "cac",
             "bca",
             "cab"
