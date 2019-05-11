@@ -71,8 +71,7 @@ class Game {
     checkScore(good) {
         this.userAnswers = document.querySelectorAll('.exercises__answers__answer.onBrown')
         let found = false
-        if (this.userAnswers.length != 6) //test!
-        {
+        if (this.userAnswers.length != 30) {
             document.querySelectorAll('.exercises__answers').forEach(e => {
                 if (!found) {
                     this.checked = false
