@@ -7,14 +7,14 @@ class Game {
         this.answersTable = [
             "bbc",
             "bac",
-            // "bac",
-            // "acc",
-            // "bcb",
-            // "aba",
-            // "caa",
-            // "cac",
-            // "bca",
-            // "cab"
+            "bac",
+            "acc",
+            "bcb",
+            "aba",
+            "caa",
+            "cac",
+            "bca",
+            "cab"
         ]
         this.answersString = this.answersTable.toString()
         this.answersString = this.answersString.replace(',', "")
