@@ -21,6 +21,10 @@ class Game {
         this.resultBox = document.querySelector('.result')
         this.resultSpan = document.querySelector('.result__text__userScore')
         this.alertBox = document.querySelector('.alert')
+        this.blockGameElement = document.querySelector('.exercises-after')
+        this.exercisesUL = document.querySelector('.exercises')
+
+
 
 
         this.answersUser.forEach(e => {
@@ -70,8 +74,11 @@ class Game {
                                 this.checked = true
                     })
                     if (!this.checked) {
-                        this.showError($(e.parentElement).offset().top - 10)
-                        this.showRightAnswers()
+                        // this.showError()
+                        setTimeout(() => {
+                            this.showError()
+                            this.animateToSection($(e.parentElement).offset().top - 10)
+                        }, 50)
                         found = true
                     }
                 }
@@ -90,20 +97,22 @@ class Game {
                     j++
                 }
             }
+            setTimeout(() => {
+                this.showScore(this.score, this.resultSpan, this.resultBox)
+                this.animateToSection($(this.resultBox).offset().top - 50)
+            }, 100)
 
-            this.showScore(this.score, this.resultSpan, this.resultBox)
         }
     }
     showScore(score, txt, box) {
         txt.textContent = score
         this.changeInline(box, 'display', 'block')
-
-
+        // console.log(this.exercisesUL.clientHeight)
+        this.changeInline(this.blockGameElement, 'height',`${this.exercisesUL.clientHeight}px`)
+        this.changeInline(this.blockGameElement, 'display', 'block')
+        
     }
-    showError(distance) {
-        $('body,html').animate({
-            scrollTop: distance
-        }, 500)
+    showError() {
         this.changeInline(this.alertBox, 'display', 'block')
         this.changeInline(this.alertBox, 'animation', 'alert-anim 1s linear')
         setTimeout(() => {
@@ -111,13 +120,10 @@ class Game {
             this.changeInline(this.alertBox, 'animation', 'none')
         }, 1000)
     }
-    showRightAnswers() {
-        // this.answersTable
-        // for (let i = 0; i < 10; i++){
-        //     for (let j = 0; i < 2; i++){
-
-        //     }
-        // }
+    animateToSection(distance) {
+        $('body,html').animate({
+            scrollTop: distance
+        }, 500)
     }
 
 }
