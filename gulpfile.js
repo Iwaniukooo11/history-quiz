@@ -7,6 +7,7 @@ const {
 } = require('gulp'),
   minifyCSS = require('gulp-clean-css'),
   minifyJS = require('gulp-minify'),
+  imagemin = require('gulp-imagemin'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync').create(),
@@ -31,6 +32,13 @@ function assets() {
   return src('./src/assets/**/*')
     .pipe(wait(time))
     .pipe(dest('./dist/assets'))
+}
+
+function images() {
+  return src('./src/images/*')
+    .pipe(wait(time))
+    .pipe(imagemin())
+    .pipe(dest('dist/assets/images'))
 }
 
 function js() {
@@ -91,5 +99,5 @@ exports.js = js
 exports.copy = copy
 exports.css = css
 exports.reload = reload;
-exports.build = series(clean, js, copy, css, assets);
-exports.default = series(clean, js, copy, css, assets, parallel(reload, watcher));
+exports.build = series(clean, js, copy, css, images, assets);
+exports.default = series(clean, js, copy, css, images, assets, parallel(reload, watcher));
