@@ -139,6 +139,10 @@ main {
     padding: 5px 15px;
     box-shadow: -4px 4px 0 0 $dark-brown-color;
     // animation: check-btn-anim .3s 2s linear; //!!
+
+    &:hover {
+        cursor: pointer
+    }
 }
 
 @keyframes check-btn-anim {
