@@ -1,12 +1,15 @@
-#History quiz named "Zrozum Historię"
-##Used technologies 
+# History quiz named "Zrozum Historię"
+## Used technologies 
 -HTML5
 -CSS3(Flexbox and BEM Metodology)
--JavaScript(used Jquerry for scroll animation)
+-JavaScript(used jQuery for scroll animation)
 -Gulp
--[x]Polish language version
--[x]Responsive
-##Author:
+
+## Tasks
+- [x] Polish language version
+- [x] Responsive
+
+## Author:
 Mateusz Iwaniuk
 
 [Live Demo](https://iwaniukooo11.github.io/history-quiz/dist/)
