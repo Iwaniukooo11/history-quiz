@@ -6,13 +6,13 @@ class Game {
         this.checkButton = document.querySelector('.check-btn')
         this.answersTable = [
             "bbc",
-            "bac",
+            "bcc",
             "bac",
             "acc",
             "bca",
             "aba",
             "cab",
-            "cac",
+            "bac",
             "bca",
             "cab"
         ]
