@@ -1,5 +1,5 @@
 class Game {
-    constructor() {
+        constructor() {
         this.allAnswers = document.querySelectorAll('.exercises__answers__answer')
         this.rowButton = document.querySelector('.section-about__btn')
         this.rowButtonRow = document.querySelector('.section-about__btn__fas')

@@ -1,7 +1,7 @@
 {
-  "name": "base-teaching",
+  "name": "history-quiz",
   "version": "1.0.0",
-  "description": "Basics of frontend programming.",
+  "description": "History quiz project ",
   "main": "index.js",
   "dependencies": {
     "browser-sync": "^2.26.5",
@@ -24,10 +24,10 @@
     "type": "git",
     "url": "git+https://github.com/plumthedev/base-teaching.git"
   },
-  "author": "plumthedev",
+  "author": "Iwaniukooo11",
   "license": "GPL-2.0-only",
   "bugs": {
-    "url": "https://github.com/plumthedev/base-teaching/issues"
+    "url": "https://github.com/Iwaniukooo11/history-quiz/issues"
   },
-  "homepage": "https://github.com/plumthedev/base-teaching#readme"
+  "homepage": "https://github.com/Iwaniukooo11/history-quiz/blob/master/README.md"
 }
