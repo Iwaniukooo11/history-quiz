@@ -17,7 +17,7 @@ const {
 sass.compiler = require('node-sass');
 const time = 20
 
-function hello() {
+function hello(){
   console.log('Hello!');
 }
 exports.hello = hello
