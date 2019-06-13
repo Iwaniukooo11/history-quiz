@@ -21,7 +21,12 @@ body {
 ul {
     list-style: none;
 }
+
 .onBrown {
     color: $dark-brown-color;
     font-weight: bold;
+}
+
+button {
+    outline: none;
 }

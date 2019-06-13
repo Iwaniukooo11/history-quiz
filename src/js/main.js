@@ -1,8 +1,8 @@
 class Game {
-        constructor() {
+    constructor() {
         this.allAnswers = document.querySelectorAll('.exercises__answers__answer')
         this.rowButton = document.querySelector('.section-about__btn')
-        this.rowButtonRow = document.querySelector('.section-about__btn__fas')
+        this.rowButtonRow = document.querySelector('.section-about__fas')
         this.checkButton = document.querySelector('.check-btn')
         this.answersTable = [
             "bbc",
@@ -18,11 +18,11 @@ class Game {
         ]
         this.answersString = this.answersTable.toString().split(',').join("")
         this.resultBox = document.querySelector('.result')
-        this.resultSpan = document.querySelector('.result__text__userScore')
+        this.resultSpan = document.querySelector('.result__userScore')
         this.alertBox = document.querySelector('.alert')
         this.blockGameElement = document.querySelector('.exercises-after')
         this.exercisesUL = document.querySelector('.exercises')
-        this.playAgain = document.querySelector('.result__text__play-again')
+        this.playAgain = document.querySelector('.result__play-again')
 
         this.exercisesLists = document.querySelectorAll('.exercises__answers')
         this.tableOfListElemenrs = []
