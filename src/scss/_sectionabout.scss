@@ -14,19 +14,14 @@
 
     &__desc {
         text-align: center;
-        font-size: 23px;
-
-        &__onBrown {
-            color: $dark-brown-color;
-            font-weight: bold;
-        }
-
-        &__last {
-            display: block;
-            margin: 10px auto;
-            text-align: center;
-            font-size: 1.2em;
-        }
+        font-size: 23px;        
+    }
+    
+    &__last {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 1.2em;
     }
 
     &__btn {
@@ -42,20 +37,19 @@
         position: relative;
         overflow: hidden;
 
-
-        &__fas {
-            text-shadow: 0 calc(#{$size1} * -0.5) 0 white,
-            0 calc(#{$size1} * -1) 0 white;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 52%;
-            left: 50%;
-            // animation: btn-anim 2.75s infinite linear;
-        }
-
         &:hover {
             cursor: pointer
         }
+    }
+    
+    &__fas {
+        text-shadow: 0 calc(#{$size1} * -0.5) 0 white,
+        0 calc(#{$size1} * -1) 0 white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 52%;
+        left: 50%;
+        // animation: btn-anim 2.75s infinite linear;
     }
 }
 
