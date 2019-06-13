@@ -68,7 +68,7 @@ class Game {
         element.style[atribute] = value
     }
     checkScore(good) {
-        this.userAnswers = document.querySelectorAll('.exercises__answers__answer.onBrown')
+        this.userAnswers = document.querySelectorAll('.exercises__answer.onBrown')
         let found = false
         if (this.userAnswers.length != 30) {
             document.querySelectorAll('.exercises__answers').forEach(e => {

@@ -3,7 +3,6 @@ main {
     overflow: hidden;
     width: 100%;
 
-
     .alert {
         position: fixed;
         transform: translate(-50%, 0);
@@ -185,85 +184,92 @@ main {
 }
 
 @media(min-width:480px) {
-    .exercises {
-        &__exercise-num {
-            font-size: 36px;
+    main {
+        .exercises {
+            &__exercise-num {
+                font-size: 36px;
 
-            &::after {
-                height: 4px;
+                &::after {
+                    height: 4px;
+                }
             }
         }
-    }
 
-    .result {
-        font-size: 36px;
-    }
+        .result {
+            font-size: 36px;
+        }
 
-    .check-btn {
-        font-size: 48px;
-        margin: 50px auto;
-        padding: 10px 25px;
-        box-shadow: -5px 6px 0 0 $dark-brown-color;
+        .check-btn {
+            font-size: 48px;
+            margin: 50px auto;
+            padding: 10px 25px;
+            box-shadow: -5px 6px 0 0 $dark-brown-color;
+        }
     }
 }
 
 @media(min-width:880px) {
-    .exercises {
-        &__exercise-num {
-            font-size: 40px;
-        }
+    main {
+        .exercises {
+            &__exercise-num {
+                font-size: 40px;
+            }
 
-        &__txt,
-        &__answers {
-            font-size: 27px;
-        }
-    }
-
-    .result {
-        font-size: 45px;
-    }
-
-    .check-btn {
-        font-size: 55px;
-        margin: 50px auto;
-        padding: 12px 35px;
-        box-shadow: -7px 7px 0 0 $dark-brown-color;
-    }
-
-
-}
-
-@media(min-width:1100px) {
-    .exercises {
-        flex-direction: row;
-        justify-content: space-around;
-
-        &__list-element {
-            flex-basis: 45%;
-            text-align: center;
-            margin: 55px 15px;
-
-            &:first-child {
-                margin-top: 55px;
+            &__txt,
+            &__answers {
+                font-size: 27px;
             }
         }
 
-        &__exercise-num::after {
-            width: 35vw;
-            left: calc((100% - 35vw) / 2)
+        .result {
+            font-size: 45px;
+        }
+
+        .check-btn {
+            font-size: 55px;
+            margin: 50px auto;
+            padding: 12px 35px;
+            box-shadow: -7px 7px 0 0 $dark-brown-color;
+        }
+    }
+}
+
+@media(min-width:1100px) {
+
+    main {
+        .exercises {
+            flex-direction: row;
+            justify-content: space-around;
+
+            &--element {
+                flex-basis: 45%;
+                text-align: center;
+                margin: 55px 15px;
+
+                &:first-child {
+                    margin-top: 55px;
+                }
+            }
+
+            &__exercise-num::after {
+                width: 35vw;
+                left: calc((100% - 35vw) / 2)
+            }
         }
     }
 }
 
 @media(min-width:1690px) {
-    .exercises {
-        &__list-element {
-            flex-basis: 28%;
-        }
+    main {
+        .exercises {
+            &--element {
+                flex-basis: 28%;
+            }
 
-        &__exercise-num::after {
-            width: 24vw;
-            left: calc((100% - 24vw) / 2)
+            &__exercise-num::after {
+                width: 24vw;
+                left: calc((100% - 24vw) / 2)
+            }
         }
     }
 }
